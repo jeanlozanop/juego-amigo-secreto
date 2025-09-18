@@ -32,21 +32,21 @@ function actualizarListaAmigos() {
   lista.innerHTML = ""; // Limpiar la lista antes de actualizarla   
 
   // Recorremos el array y creamos un <li> para cada amigo
-  // for (let i = 0; i < amigos.length; i++) {
-  //   // Crear un nuevo <li>
-  //   let item = document.createElement('li');
-  //   // Asignar el texto al <li>
-  //   item.textContent = amigos[i];
-  //   // Agregar el <li> al <ul>
-  //   lista.appendChild(item);
-  // }
+   for (let i = 0; i < amigos.length; i++) {
+     // Crear un nuevo <li>
+     let item = document.createElement('li');
+     // Asignar el texto al <li>
+     item.textContent = amigos[i];
+     // Agregar el <li> al <ul>
+     lista.appendChild(item);
+   };
 
   // Otra forma de recorrer el array usando forEach
-    amigos.forEach(function(amigo) {
-      let item = document.createElement('li');
-      item.textContent = amigo;
-      lista.appendChild(item);
-    });
+  //  amigos.forEach(function(amigo) {
+  //    let item = document.createElement('li');
+  //    item.textContent = amigo;
+  //    lista.appendChild(item);
+  //  });
 
   return;
 }
@@ -64,4 +64,5 @@ function sortearAmigo() {
   document.getElementById('resultado').innerHTML = `El amigo sorteado es: <strong>${amigoSorteado}</strong>`;
   return;
 }
+
 
